@@ -1,0 +1,29 @@
+.bg {
+  background-image: url("../assets/grand_theft_auto_6___gta_vi___full_size_wallpaper_by_hotripak_dgj52pm.jpg");
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
+
+.introSection {
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+.introSection p {
+  font-family: "Manrope", sans-serif;
+  max-width: 600px;
+  font-size: 1.2rem;
+}
+
+.gamingImg {
+  height: 400px;
+  width: 400px;
+  background-image: url("../assets/gaming _setup.jpg");
+  background-position: center;
+  background-size: cover;
+}

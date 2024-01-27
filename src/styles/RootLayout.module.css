@@ -1,0 +1,59 @@
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #000000;
+  color: white;
+  height: 100px;
+}
+
+a {
+  color: white;
+}
+
+header nav div {
+  display: flex;
+  gap: 20px;
+}
+
+footer {
+  background-color: #000000;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 10px;
+}
+
+footer nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 1000px;
+}
+
+footer nav div {
+  display: flex;
+  gap: 20px;
+}
+
+footer section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 1000px;
+  color: grey;
+}
+
+footer section p {
+  max-width: 500px;
+}
+
+footer p {
+  width: 1000px;
+  color: grey;
+}
