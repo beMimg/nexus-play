@@ -8,10 +8,16 @@ export default function RootLayout() {
       <header>
         <nav>
           <h1>NexusPlay</h1>
-          <div>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="games">Games</NavLink>
-            <NavLink to="popular">Popular</NavLink>
+          <div className={style.links}>
+            <NavLink className={style.link} to="/">
+              Home
+            </NavLink>
+            <NavLink className={style.link} to="games">
+              Games
+            </NavLink>
+            <NavLink className={style.link} to="popular">
+              Popular
+            </NavLink>
           </div>
         </nav>
       </header>
@@ -22,9 +28,15 @@ export default function RootLayout() {
         <nav>
           <h1>NexusPlay</h1>
           <div>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="games">Games</NavLink>
-            <NavLink to="popular">Popular</NavLink>
+            <NavLink className={style.link} to="/">
+              Home
+            </NavLink>
+            <NavLink className={style.link} to="games">
+              Games
+            </NavLink>
+            <NavLink className={style.link} to="popular">
+              Popular
+            </NavLink>
           </div>
         </nav>
         <section>
@@ -34,7 +46,11 @@ export default function RootLayout() {
             gems, and redefine your gaming odyssey. Join NexusPlay and ascend to
             a cosmos of gaming brilliance.
           </p>
-          <a href="https://github.com/beMimg" target="_blank">
+          <a
+            className={style.link}
+            href="https://github.com/beMimg"
+            target="_blank"
+          >
             G{" "}
           </a>
         </section>
