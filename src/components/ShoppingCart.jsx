@@ -15,8 +15,9 @@ export default function ShoppingCart({ setOpen, cart }) {
               <img src={product.background_image} alt="" />
               <div>
                 <p>{product.name}</p>
+                <p>{product.quantity}</p>
               </div>
-              <p>{product.id}$</p>
+              <p>{product.price}$</p>
             </div>
           ))}
         </main>

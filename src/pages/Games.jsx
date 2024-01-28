@@ -13,14 +13,18 @@ export default function Games({ setCart }) {
     setCart((prevCart) => {
       const updatedCart = prevCart.map((game) => {
         if (game.id === id) {
-          return { ...game, quantity: game.quantity + 1 };
+          return {
+            ...game,
+            quantity: game.quantity + 1,
+            price: game.id * (game.quantity + 1),
+          };
         }
         return game;
       });
 
       const itemExists = updatedCart.some((game) => game.id === id);
       if (!itemExists) {
-        updatedCart.push({ id, name, quantity, price: id });
+        updatedCart.push({ id, name, quantity, price: id * quantity });
       }
       return updatedCart;
     });
