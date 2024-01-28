@@ -3,7 +3,7 @@ import style from "../styles/Cart.module.css";
 import { useState } from "react";
 import ShoppingCart from "./ShoppingCart";
 
-export default function Cart({ howManyProducts }) {
+export default function Cart({ howManyProducts, cart }) {
   const [open, setOpen] = useState(false);
 
   console.log(open);
@@ -15,7 +15,7 @@ export default function Cart({ howManyProducts }) {
           <p className={style.cartLength}>{howManyProducts}</p>
         </div>
       </div>
-      {open && <ShoppingCart setOpen={setOpen} />}
+      {open && <ShoppingCart setOpen={setOpen} cart={cart} />}
     </>
   );
 }

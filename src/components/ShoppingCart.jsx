@@ -1,6 +1,7 @@
 import style from "../styles/Cart.module.css";
 
-export default function ShoppingCart({ setOpen }) {
+export default function ShoppingCart({ setOpen, cart }) {
+  console.log(cart);
   return (
     <div className={style.cartModal}>
       <div className={style.shoppingCart}>
@@ -9,7 +10,15 @@ export default function ShoppingCart({ setOpen }) {
           <button onClick={() => setOpen(false)}>x</button>
         </header>
         <main>
-          <p>product</p>
+          {cart.map((product) => (
+            <div key={product.id}>
+              <img src={product.background_image} alt="" />
+              <div>
+                <p>{product.name}</p>
+              </div>
+              <p>{product.id}$</p>
+            </div>
+          ))}
         </main>
         <footer className={style.footer}>
           <div className={style.subTotal}>

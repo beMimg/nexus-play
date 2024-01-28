@@ -4,7 +4,7 @@ import Cart from "../components/Cart";
 
 export default function RootLayout({ cart }) {
   const howManyProducts = cart.reduce((a, b) => a + b.quantity, 0);
-
+  console.log(cart);
   return (
     <>
       <header>
@@ -20,7 +20,7 @@ export default function RootLayout({ cart }) {
             <NavLink className={style.link} to="popular">
               Popular
             </NavLink>
-            <Cart howManyProducts={howManyProducts} products={cart} />
+            <Cart howManyProducts={howManyProducts} cart={cart} />
           </div>
         </nav>
       </header>

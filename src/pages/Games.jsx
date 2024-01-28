@@ -10,10 +10,20 @@ export default function Games({ setCart }) {
   const categorieGames = categorie.results;
 
   function handleAddBtn(id, name, quantity) {
-    setCart((prevCart) => [
-      ...prevCart,
-      { id: id, quantity: quantity, name: name, price: id },
-    ]);
+    setCart((prevCart) => {
+      const updatedCart = prevCart.map((game) => {
+        if (game.id === id) {
+          return { ...game, quantity: game.quantity + 1 };
+        }
+        return game;
+      });
+
+      const itemExists = updatedCart.some((game) => game.id === id);
+      if (!itemExists) {
+        updatedCart.push({ id, name, quantity, price: id });
+      }
+      return updatedCart;
+    });
   }
 
   return (
