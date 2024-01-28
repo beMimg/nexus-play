@@ -1,4 +1,5 @@
-import { Link, RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { useState } from "react";
 // layouts
 import RootLayout from "./layouts/RootLayout";
 import GamesLayout, { categoriesLoader } from "./layouts/GamesLayout";
@@ -9,10 +10,12 @@ import Games, { categorieLoader } from "./pages/Games";
 import GamesDefault from "./pages/GamesDefault";
 
 const Router = () => {
+  const [cart, setCart] = useState([]);
+
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <RootLayout></RootLayout>,
+      element: <RootLayout cart={cart}></RootLayout>,
       children: [
         { index: true, element: <Home></Home> },
         {
@@ -21,7 +24,11 @@ const Router = () => {
           loader: categoriesLoader,
           children: [
             { index: true, element: <GamesDefault></GamesDefault> },
-            { path: ":id", element: <Games></Games>, loader: categorieLoader },
+            {
+              path: ":id",
+              element: <Games setCart={setCart}></Games>,
+              loader: categorieLoader,
+            },
           ],
         },
         {

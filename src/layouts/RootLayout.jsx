@@ -1,8 +1,10 @@
 import { Outlet, NavLink } from "react-router-dom";
 import style from "../styles/RootLayout.module.css";
-import gitHubSvg from "../assets/github.svg";
+import { IoCart } from "react-icons/io5";
 
-export default function RootLayout() {
+export default function RootLayout({ cart }) {
+  const howManyProducts = cart.reduce((a, b) => a + b.quantity, 0);
+
   return (
     <>
       <header>
@@ -17,6 +19,14 @@ export default function RootLayout() {
             </NavLink>
             <NavLink className={style.link} to="popular">
               Popular
+            </NavLink>
+            <NavLink className={style.link}>
+              <div className={style.cartContainer}>
+                <IoCart className={style.cartIcon} />
+                <div className={style.cartLengthContainer}>
+                  <p className={style.cartLength}>{howManyProducts}</p>
+                </div>
+              </div>
             </NavLink>
           </div>
         </nav>

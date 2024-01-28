@@ -1,24 +1,25 @@
-import { useEffect, useState } from "react";
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { useState } from "react";
+import { useLoaderData } from "react-router-dom";
 import style from "../styles/Games.module.css";
+import GameCard from "../components/GameCard";
 
 let key = "2a3e3c54685146fe8d40f600aef2df29";
 
-export default function Games() {
-  const { id } = useParams();
+export default function Games({ setCart }) {
   const categorie = useLoaderData();
   const categorieGames = categorie.results;
 
-  console.log(categorieGames);
+  function handleAddBtn(id, name, quantity) {
+    setCart((prevCart) => [
+      ...prevCart,
+      { id: id, quantity: quantity, name: name, price: id },
+    ]);
+  }
+
   return (
     <div className={style.gamesContainer}>
       {categorieGames.map((game) => (
-        <div className={style.gameCard} key={game.id}>
-          <div className={style.imageContainer}>
-            <img src={game.background_image} alt="" />
-          </div>
-          <h1 className={style.title}>{game.name}</h1>
-        </div>
+        <GameCard handleAddBtn={handleAddBtn} game={game} key={game.id} />
       ))}
     </div>
   );
