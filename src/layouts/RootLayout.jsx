@@ -1,6 +1,6 @@
 import { Outlet, NavLink } from "react-router-dom";
 import style from "../styles/RootLayout.module.css";
-import { IoCart } from "react-icons/io5";
+import Cart from "../components/Cart";
 
 export default function RootLayout({ cart }) {
   const howManyProducts = cart.reduce((a, b) => a + b.quantity, 0);
@@ -8,7 +8,7 @@ export default function RootLayout({ cart }) {
   return (
     <>
       <header>
-        <nav>
+        <nav className={style.headerNav}>
           <h1>NexusPlay</h1>
           <div className={style.links}>
             <NavLink className={style.link} to="/">
@@ -20,24 +20,17 @@ export default function RootLayout({ cart }) {
             <NavLink className={style.link} to="popular">
               Popular
             </NavLink>
-            <NavLink className={style.link}>
-              <div className={style.cartContainer}>
-                <IoCart className={style.cartIcon} />
-                <div className={style.cartLengthContainer}>
-                  <p className={style.cartLength}>{howManyProducts}</p>
-                </div>
-              </div>
-            </NavLink>
+            <Cart howManyProducts={howManyProducts} products={cart} />
           </div>
         </nav>
       </header>
       <main>
         <Outlet></Outlet>
       </main>
-      <footer>
-        <nav>
+      <footer className={style.footer}>
+        <nav className={style.footerNav}>
           <h1>NexusPlay</h1>
-          <div>
+          <div className={style.footerNavDiv}>
             <NavLink className={style.link} to="/">
               Home
             </NavLink>
@@ -49,8 +42,8 @@ export default function RootLayout({ cart }) {
             </NavLink>
           </div>
         </nav>
-        <section>
-          <p>
+        <section className={style.footerSection}>
+          <p className={style.footerText}>
             Unleash Your Gameverse with us, where every click opens a portal to
             unparalleled excitement. Navigate uncharted realms, discover hidden
             gems, and redefine your gaming odyssey. Join NexusPlay and ascend to
@@ -64,7 +57,7 @@ export default function RootLayout({ cart }) {
             G{" "}
           </a>
         </section>
-        <p>Copyright 2024. All Rights Reserved</p>
+        <p className={style.footerP}>Copyright 2024. All Rights Reserved</p>
       </footer>
     </>
   );
