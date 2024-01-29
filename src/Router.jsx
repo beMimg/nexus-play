@@ -3,7 +3,6 @@ import { useState } from "react";
 // layouts
 import RootLayout from "./layouts/RootLayout";
 import GamesLayout, { categoriesLoader } from "./layouts/GamesLayout";
-import PopularLayout from "./layouts/PopularLayout";
 // pages
 import Home from "./pages/Home";
 import Games, { categorieLoader } from "./pages/Games";
@@ -31,10 +30,9 @@ const Router = () => {
             },
           ],
         },
-        { path: "checkout", element: <Checkout /> },
         {
-          path: "popular",
-          element: <PopularLayout></PopularLayout>,
+          path: "checkout",
+          element: <Checkout cart={cart} setCart={setCart} />,
         },
       ],
     },

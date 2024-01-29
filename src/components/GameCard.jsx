@@ -18,7 +18,7 @@ export default function GameCard({ handleAddBtn, game }) {
         <img src={game.background_image} alt="" />
       </div>
       <h1 className={style.title}>{game.name}</h1>
-      <p>Price: {game.id}</p>
+      <p>Price: ${game.id}</p>
       <input type="number" value={quantity} onChange={handleQuantityChange} />
       <button
         disabled={!quantity}

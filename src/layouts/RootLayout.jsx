@@ -17,9 +17,7 @@ export default function RootLayout({ cart, setCart }) {
             <NavLink className={style.link} to="games">
               Games
             </NavLink>
-            <NavLink className={style.link} to="popular">
-              Popular
-            </NavLink>
+
             <Cart
               howManyProducts={howManyProducts}
               cart={cart}
