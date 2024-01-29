@@ -1,4 +1,3 @@
-import style from "../styles/Home.module.css";
 import backgroundImg from "../assets/gta6_bg.jpg";
 import gamingSetup from "../assets/gaming_setup.jpg";
 

@@ -12,7 +12,7 @@
   height: 250px;
   border: 1px solid grey;
   border-radius: 5px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adjust the shadow values for more visibility */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   background-color: black;
   color: white;
 }
