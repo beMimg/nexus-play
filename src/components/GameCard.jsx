@@ -22,7 +22,9 @@ export default function GameCard({ handleAddBtn, game }) {
       <input type="number" value={quantity} onChange={handleQuantityChange} />
       <button
         disabled={!quantity}
-        onClick={() => handleAddBtn(game.id, game.name, quantity)}
+        onClick={() =>
+          handleAddBtn(game.id, game.name, quantity, game.background_image)
+        }
       >
         Add
       </button>

@@ -9,7 +9,7 @@ export default function Games({ setCart }) {
   const categorie = useLoaderData();
   const categorieGames = categorie.results;
 
-  function handleAddBtn(id, name, quantity) {
+  function handleAddBtn(id, name, quantity, image) {
     setCart((prevCart) => {
       const updatedCart = prevCart.map((game) => {
         if (game.id === id) {
@@ -24,7 +24,13 @@ export default function Games({ setCart }) {
 
       const itemExists = updatedCart.some((game) => game.id === id);
       if (!itemExists) {
-        updatedCart.push({ id, name, quantity, price: id * quantity });
+        updatedCart.push({
+          id,
+          name,
+          quantity,
+          price: id * quantity,
+          image: image,
+        });
       }
       return updatedCart;
     });

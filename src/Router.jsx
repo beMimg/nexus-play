@@ -8,14 +8,14 @@ import PopularLayout from "./layouts/PopularLayout";
 import Home from "./pages/Home";
 import Games, { categorieLoader } from "./pages/Games";
 import GamesDefault from "./pages/GamesDefault";
-
+import Checkout from "./pages/Checkout";
 const Router = () => {
   const [cart, setCart] = useState([]);
 
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <RootLayout cart={cart}></RootLayout>,
+      element: <RootLayout cart={cart} setCart={setCart}></RootLayout>,
       children: [
         { index: true, element: <Home></Home> },
         {
@@ -31,6 +31,7 @@ const Router = () => {
             },
           ],
         },
+        { path: "checkout", element: <Checkout /> },
         {
           path: "popular",
           element: <PopularLayout></PopularLayout>,

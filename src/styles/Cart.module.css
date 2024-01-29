@@ -56,3 +56,15 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.gameContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.image {
+  height: 60px;
+  width: 60px;
+}

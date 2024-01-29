@@ -2,9 +2,9 @@ import { Outlet, NavLink } from "react-router-dom";
 import style from "../styles/RootLayout.module.css";
 import Cart from "../components/Cart";
 
-export default function RootLayout({ cart }) {
+export default function RootLayout({ cart, setCart }) {
   const howManyProducts = cart.reduce((a, b) => a + b.quantity, 0);
-  console.log(cart);
+
   return (
     <>
       <header>
@@ -20,7 +20,11 @@ export default function RootLayout({ cart }) {
             <NavLink className={style.link} to="popular">
               Popular
             </NavLink>
-            <Cart howManyProducts={howManyProducts} cart={cart} />
+            <Cart
+              howManyProducts={howManyProducts}
+              cart={cart}
+              setCart={setCart}
+            />
           </div>
         </nav>
       </header>
