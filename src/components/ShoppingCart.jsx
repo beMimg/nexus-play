@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import style from "../styles/Cart.module.css";
 import ItemShoppingCart from "./ItemShoppingCart";
 
 export default function ShoppingCart({ setOpen, cart, setCart }) {
@@ -73,9 +72,11 @@ export default function ShoppingCart({ setOpen, cart, setCart }) {
           <p>${subtotal}</p>
         </div>
         <p>Shipping and taxes calculate at checkout. </p>
-        <button onClick={() => setOpen(false)}>
-          <Link to="checkout">Checkout</Link>
-        </button>
+        {cart.length > 0 && (
+          <button onClick={() => setOpen(false)}>
+            <Link to="checkout">Checkout</Link>
+          </button>
+        )}
 
         <p>Or Continue Shopping</p>
       </footer>

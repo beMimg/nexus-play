@@ -1,5 +1,3 @@
-import style from "../styles/Cart.module.css";
-
 export default function ItemShoppingCart({ product, handleBtn, handleDelete }) {
   return (
     <div className={style.gameContainer}>

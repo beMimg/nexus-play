@@ -1,23 +1,18 @@
-import { Outlet, NavLink } from "react-router-dom";
-import style from "../styles/RootLayout.module.css";
+import { Outlet, NavLink, Link } from "react-router-dom";
 import Cart from "../components/Cart";
+import { FaGithub } from "react-icons/fa";
 
 export default function RootLayout({ cart, setCart }) {
   const howManyProducts = cart.reduce((a, b) => a + b.quantity, 0);
 
   return (
     <>
-      <header>
-        <nav className={style.headerNav}>
-          <h1>NexusPlay</h1>
-          <div className={style.links}>
-            <NavLink className={style.link} to="/">
-              Home
-            </NavLink>
-            <NavLink className={style.link} to="games">
-              Games
-            </NavLink>
-
+      <header className="bg-black  p-3">
+        <nav className="text-white flex flex-row justify-evenly items-center ">
+          <h1 className="text-2xl">NexusPlay</h1>
+          <div className="flex gap-2 items-center justify-center text-xl">
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="games">Games</NavLink>
             <Cart
               howManyProducts={howManyProducts}
               cart={cart}
@@ -29,37 +24,32 @@ export default function RootLayout({ cart, setCart }) {
       <main>
         <Outlet></Outlet>
       </main>
-      <footer className={style.footer}>
-        <nav className={style.footerNav}>
-          <h1>NexusPlay</h1>
-          <div className={style.footerNavDiv}>
-            <NavLink className={style.link} to="/">
-              Home
-            </NavLink>
-            <NavLink className={style.link} to="games">
-              Games
-            </NavLink>
-            <NavLink className={style.link} to="popular">
-              Popular
-            </NavLink>
+      <footer className="flex flex-col bg-black text-white p-4 relative">
+        <nav className="flex justify-evenly items-center p-2">
+          <h1 className="text-2xl">NexusPlay</h1>
+          <div className="flex gap-4 items-center justify-center">
+            <Link to="/">Home</Link>
+            <Link to="games">Games</Link>
           </div>
         </nav>
-        <section className={style.footerSection}>
-          <p className={style.footerText}>
+        <section className="flex justify-evenly items-center p-2 ">
+          <p className="">
             Unleash Your Gameverse with us, where every click opens a portal to
             unparalleled excitement. Navigate uncharted realms, discover hidden
             gems, and redefine your gaming odyssey. Join NexusPlay and ascend to
             a cosmos of gaming brilliance.
           </p>
           <a
-            className={style.link}
             href="https://github.com/beMimg"
             target="_blank"
+            className="absolute top-2 right-2 text-xl"
           >
-            G{" "}
+            <FaGithub />
           </a>
         </section>
-        <p className={style.footerP}>Copyright 2024. All Rights Reserved</p>
+        <p className="flex self-center pt-4">
+          Copyright 2024. All Rights Reserved
+        </p>
       </footer>
     </>
   );

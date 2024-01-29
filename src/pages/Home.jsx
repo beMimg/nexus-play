@@ -1,11 +1,16 @@
 import style from "../styles/Home.module.css";
+import backgroundImg from "../assets/gta6_bg.jpg";
+import gamingSetup from "../assets/gaming_setup.jpg";
 
 export default function Home() {
   return (
     <div className="home">
-      <div className={style.bg}></div>
-      <section className={style.introSection}>
-        <p>
+      <img
+        src={backgroundImg}
+        className="flex w-full object-cover object-center md:h-[500px]"
+      ></img>
+      <section className="p-4 flex flex-col items-center justify-center gap-10 md:flex-row md:h-[500px]">
+        <p className="lg:w-1/3">
           Welcome to NexusPlay, your exclusive gateway to a boundless universe
           of gaming wonders. As pioneers in the gaming cosmos, NexusPlay is more
           than a platform—it's a celestial nexus where extraordinary games
@@ -17,7 +22,7 @@ export default function Home() {
           hidden gems, and redefine your gaming odyssey. Join NexusPlay and
           ascend to a cosmos of gaming brilliance.
         </p>
-        <div className={style.gamingImg}></div>
+        <img src={gamingSetup} className="h-60 md:h-60 lg:h-96"></img>
       </section>
     </div>
   );
