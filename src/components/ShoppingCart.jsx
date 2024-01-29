@@ -39,6 +39,12 @@ export default function ShoppingCart({ setOpen, cart, setCart }) {
     }
   }
 
+  function handleDelete(id) {
+    setCart((prevCart) => {
+      const updatedCart = prevCart.filter((game) => game.id !== id);
+      return updatedCart;
+    });
+  }
   return (
     <div className={style.shoppingCart}>
       <header className={style.header}>
@@ -54,6 +60,7 @@ export default function ShoppingCart({ setOpen, cart, setCart }) {
               <img className={style.image} src={product.image} alt="" />
               <div>
                 <p>{product.name}</p>
+
                 <div>
                   <p>Quantity: {product.quantity}</p>
                   <button onClick={() => handleBtn(product.id, "+")}>+</button>
@@ -66,6 +73,7 @@ export default function ShoppingCart({ setOpen, cart, setCart }) {
                 </div>
               </div>
               <p>{product.price}$</p>
+              <button onClick={() => handleDelete(product.id)}>x</button>
             </div>
           ))
         )}
