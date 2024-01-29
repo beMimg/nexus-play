@@ -7,7 +7,7 @@ export default function RootLayout({ cart, setCart }) {
 
   return (
     <>
-      <header className="bg-black  p-3">
+      <header className="bg-black  p-3 fixed w-full z-30 ">
         <nav className="text-white flex flex-row justify-evenly items-center ">
           <h1 className="text-2xl">NexusPlay</h1>
           <div className="flex gap-2 items-center justify-center text-xl">

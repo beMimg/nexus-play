@@ -1,12 +1,12 @@
-.gamesContainer {
+/* .gamesContainer {
   padding: 20px;
   display: grid;
   align-items: center;
   justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
   gap: 20px;
-}
-
+} */
+/* 
 .gameCard {
   width: 200px;
   height: 250px;
@@ -24,4 +24,4 @@
 
 .title {
   font-size: 1rem;
-}
+} */
