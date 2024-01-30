@@ -24,7 +24,7 @@ export default function RootLayout({ cart, setCart }) {
       <main>
         <Outlet></Outlet>
       </main>
-      <footer className="flex flex-col bg-black text-white p-4 relative">
+      <footer className="flex flex-col bg-black text-white p-4 relative lg:gap-5">
         <nav className="flex justify-evenly items-center p-2">
           <h1 className="text-2xl">NexusPlay</h1>
           <div className="flex gap-4 items-center justify-center">
@@ -33,7 +33,7 @@ export default function RootLayout({ cart, setCart }) {
           </div>
         </nav>
         <section className="flex justify-evenly items-center p-2 ">
-          <p className="">
+          <p className="lg:w-2/4">
             Unleash Your Gameverse with us, where every click opens a portal to
             unparalleled excitement. Navigate uncharted realms, discover hidden
             gems, and redefine your gaming odyssey. Join NexusPlay and ascend to

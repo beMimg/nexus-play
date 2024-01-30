@@ -4,8 +4,6 @@ import ItemShoppingCart from "./ItemShoppingCart";
 export default function ShoppingCart({ setOpen, cart, setCart }) {
   const subtotal = cart.reduce((a, b) => a + b.price, 0);
 
-  console.log(cart);
-
   function handleBtn(id, condition) {
     if (condition === "+") {
       setCart((prevCart) => {
@@ -47,10 +45,12 @@ export default function ShoppingCart({ setOpen, cart, setCart }) {
   }
 
   return (
-    <div className={style.shoppingCart}>
-      <header className={style.header}>
-        <h1 className="flex">Shopping Cart</h1>
-        <button onClick={() => setOpen(false)}>x</button>
+    <div className=" absolute bg-white text-black top-0 left-0 right-0 h-screen z-40 overflow-auto">
+      <header className="flex flex-row justify-between  p-4">
+        <h1 className="flex font-bold">Shopping Cart</h1>
+        <button onClick={() => setOpen(false)} className="font-bold">
+          x
+        </button>
       </header>
       <main>
         {cart.length === 0 ? (
@@ -66,19 +66,31 @@ export default function ShoppingCart({ setOpen, cart, setCart }) {
           ))
         )}
       </main>
-      <footer className={style.footer}>
-        <div className={style.subTotal}>
-          <h2>Subtotal</h2>
-          <p>${subtotal}</p>
+      <footer className="">
+        <div className="flex flex-row gap-4 items-center">
+          <h2>Subtotal:</h2>
+          <p className="font-bold">${subtotal}</p>
         </div>
-        <p>Shipping and taxes calculate at checkout. </p>
+        <p className="text-sm">Shipping and taxes calculate at checkout. </p>
         {cart.length > 0 && (
-          <button onClick={() => setOpen(false)}>
-            <Link to="checkout">Checkout</Link>
-          </button>
+          <Link
+            className="grid justify-center p-4 bg-blue-800 text-white m-2"
+            onClick={() => setOpen(false)}
+            to="checkout"
+          >
+            Checkout
+          </Link>
         )}
-
-        <p>Or Continue Shopping</p>
+        <div className="flex gap-2">
+          <p>Or</p>
+          <Link
+            to="games"
+            onClick={() => setOpen(false)}
+            className=" text-blue-700"
+          >
+            Continue Shopping
+          </Link>
+        </div>
       </footer>
     </div>
   );

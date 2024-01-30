@@ -6,7 +6,7 @@ export default function Home() {
     <div className="home">
       <img
         src={backgroundImg}
-        className="flex w-full object-cover object-center md:h-[500px]"
+        className="flex w-full object-cover object-center md:h-[600px]"
       ></img>
       <section className="p-4 flex flex-col items-center justify-center gap-10 md:flex-row md:h-[500px]">
         <p className="lg:w-1/3">

@@ -13,11 +13,11 @@ export default function GameCard({ handleAddBtn, game }) {
   };
 
   return (
-    <div className=" bg-slate-800 text-white  shadow-2xl pb-4 rounded p-2 flex gap-4 flex-col ">
+    <div className=" bg-slate-800 text-white  shadow-2xl pb-4 rounded p-2 flex gap-4 flex-col border-black border-4">
       <img
         src={game.background_image}
         alt={game.name + "image"}
-        className=" w-full object-cover object-center h-24 pt-2 pb-2"
+        className=" w-full object-cover object-center h-24 pt-2 pb-2 lg:h-48"
       />
       <div className="flex flex-row justify-between">
         <h1 className="font-bold">{game.name}</h1>
