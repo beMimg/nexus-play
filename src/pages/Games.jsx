@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import GameCard from "../components/GameCard";
+import ShowError from "./ShowError";
 
 let key = "2a3e3c54685146fe8d40f600aef2df29";
 
@@ -35,6 +36,9 @@ export default function Games({ setCart }) {
     });
   }
 
+  if (categorie.count === 0) {
+    return <ShowError></ShowError>;
+  }
   return (
     <div className="flex flex-col gap-6 sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
       {categorieGames.map((game) => (
