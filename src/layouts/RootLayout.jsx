@@ -5,14 +5,26 @@ import { FaGithub } from "react-icons/fa";
 export default function RootLayout({ cart, setCart }) {
   const howManyProducts = cart.reduce((a, b) => a + b.quantity, 0);
 
+  const activeLink = "bg-white text-black p-2 rounded-xl";
+  const normalLink = "p-2 rounded-xl";
   return (
     <>
       <header className="bg-black  p-3 fixed w-full z-30 ">
         <nav className="text-white flex flex-row justify-evenly items-center ">
           <h1 className="text-2xl">NexusPlay</h1>
-          <div className="flex gap-2 items-center justify-center text-xl active:text-red-200">
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="games">Games</NavLink>
+          <div className="flex gap-4 items-center justify-center text-xl active:text-red-200">
+            <NavLink
+              className={({ isActive }) => (isActive ? activeLink : normalLink)}
+              to="/"
+            >
+              Home
+            </NavLink>
+            <NavLink
+              className={({ isActive }) => (isActive ? activeLink : normalLink)}
+              to="games"
+            >
+              Games
+            </NavLink>
             <Cart
               howManyProducts={howManyProducts}
               cart={cart}

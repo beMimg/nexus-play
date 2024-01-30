@@ -9,6 +9,11 @@ export default function GamesLayout() {
 
   gamesCategories = gamesCategories.results;
 
+  const activeLink =
+    "bg-white text-black rounded flex items-center justify-center text-center h-8 text-sm xl:text-base";
+  const normalLink =
+    "bg-black text-white flex items-center justify-center text-center h-8 text-sm xl:text-base";
+
   return (
     <div>
       <img
@@ -20,7 +25,7 @@ export default function GamesLayout() {
         <nav className="grid grid-cols-3 gap-3 p-2 shadow-2xl bg-black xl:grid-cols-4 2xl:grid-cols-5 xl:gap-5 border-white border-b-4">
           {gamesCategories.map((categorie) => (
             <NavLink
-              className="bg-black text-white flex items-center justify-center text-center h-8 text-sm xl:text-base"
+              className={({ isActive }) => (isActive ? activeLink : normalLink)}
               to={categorie.id.toString()}
               key={categorie.id}
             >
