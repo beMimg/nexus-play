@@ -1,5 +1,4 @@
 import { Outlet } from "react-router-dom";
-import style from "../styles/GamesLayout.module.css";
 import { NavLink, useLoaderData } from "react-router-dom";
 import gamesBg from "../assets/game_wallpaper.jpg";
 

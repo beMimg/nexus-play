@@ -1,5 +1,4 @@
 import { useState } from "react";
-import style from "../styles/Games.module.css";
 
 export default function GameCard({ handleAddBtn, game }) {
   const [quantity, setQuantity] = useState(1);

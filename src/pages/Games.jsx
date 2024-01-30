@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import style from "../styles/Games.module.css";
 import GameCard from "../components/GameCard";
 
 let key = "2a3e3c54685146fe8d40f600aef2df29";
