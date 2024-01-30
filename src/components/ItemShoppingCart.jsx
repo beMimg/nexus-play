@@ -1,7 +1,11 @@
 export default function ItemShoppingCart({ product, handleBtn, handleDelete }) {
   return (
     <div className="flex flex-row m-2 p-2 gap-2 bg-gray-400 shadow-2xl">
-      <img className=" h-16" src={product.image} alt="" />
+      <img
+        className=" h-16  w-16 object-cover object-center"
+        src={product.image}
+        alt=""
+      />
       <div className="flex flex-col w-full gap-2">
         <div className="flex flex-row justify-between w-full ">
           <p className="font-bold">{product.name}</p>

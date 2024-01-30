@@ -12,7 +12,7 @@ export default function GameCard({ handleAddBtn, game }) {
   };
 
   return (
-    <div className=" bg-slate-800 text-white  shadow-2xl pb-4 rounded p-2 flex gap-4 flex-col border-black border-4">
+    <div className="bg-slate-800 text-white  shadow-2xl pb-4 rounded p-2 flex gap-4 flex-col border-black border-4">
       <img
         src={game.background_image}
         alt={game.name + "image"}

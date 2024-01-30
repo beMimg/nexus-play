@@ -84,7 +84,7 @@ export default function ShoppingCart({ setOpen, cart, setCart }) {
         <div className="flex gap-2">
           <p>Or</p>
           <button onClick={() => setOpen(false)} className=" text-blue-700">
-            Continue Shopping
+            <Link to="games"> Continue Shopping</Link>
           </button>
         </div>
       </footer>
