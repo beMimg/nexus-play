@@ -1,3 +1,5 @@
+import ItemShoppingCart from "../components/ItemShoppingCart";
+
 export default function Checkout({ cart, setCart }) {
   const subtotal = cart.reduce((a, b) => a + b.price, 0);
 
@@ -42,37 +44,28 @@ export default function Checkout({ cart, setCart }) {
   }
 
   return (
-    <div className="">
-      <h1>Shopping Cart</h1>
-      <div className="">
-        <div className="">
+    <div className="flex flex-col gap-4 pt-20  min-h-[750px] md">
+      <h1 className="font-bold ml-4">Shopping Cart</h1>
+      <div className="flex flex-col md:flex-row md:justify-evenly md:items-center">
+        <div className="md:h-[600px] md:w-2/4 md:overflow-auto md:border-black md:border-4">
           {cart.map((game) => (
-            <div className="">
-              <img src={game.image} className="" alt={game.name + "image"} />
-              <div className="">
-                <h2>{game.name}</h2>
-                <p>Price: ${game.price}</p>
-                <div className="">
-                  <p>Quantity: {game.quantity}</p>
-                  <button onClick={() => handleBtn(game.id, "+")}>+</button>
-                  <button
-                    disabled={game.quantity === 1}
-                    onClick={() => handleBtn(game.id, "-")}
-                  >
-                    -
-                  </button>
-                </div>
-              </div>
-              <button onClick={() => handleDelete(game.id)}>x</button>
-            </div>
+            <ItemShoppingCart
+              key={game.id}
+              product={game}
+              handleDelete={handleDelete}
+              handleBtn={handleBtn}
+            ></ItemShoppingCart>
           ))}
         </div>
-        <div className="">
-          <div className="">
-            <h2>Order Summary</h2>
-            <p>Subtotal: ${subtotal}.00</p>
-            <button>Pay</button>
+        <div className="p-10 bg-gray-800 m-2 text-white  md:p-20 flex gap-2 flex-col rounded">
+          <p>Order Summary</p>
+          <div className="flex flex-row gap-2">
+            <p>Subtotal: </p>
+            <p className="font-bold">${subtotal}.00</p>
           </div>
+          <button className=" w-full grid justify-center p-4 bg-blue-800 text-white rounded">
+            Pay
+          </button>
         </div>
       </div>
     </div>
