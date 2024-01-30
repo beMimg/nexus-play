@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ItemShoppingCart from "../components/ItemShoppingCart";
 
 export default function Checkout({ cart, setCart }) {
@@ -63,9 +64,12 @@ export default function Checkout({ cart, setCart }) {
             <p>Subtotal: </p>
             <p className="font-bold">${subtotal}.00</p>
           </div>
-          <button className=" w-full grid justify-center p-4 bg-blue-800 text-white rounded">
+          <Link
+            to="/thanks"
+            className=" w-full grid justify-center p-4 bg-blue-800 text-white rounded"
+          >
             Pay
-          </button>
+          </Link>
         </div>
       </div>
     </div>

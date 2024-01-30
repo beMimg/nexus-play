@@ -7,6 +7,7 @@ export default function RootLayout({ cart, setCart }) {
 
   const activeLink = "bg-white text-black p-2 rounded-xl";
   const normalLink = "p-2 rounded-xl";
+
   return (
     <>
       <header className="bg-black  p-3 fixed w-full z-30 ">

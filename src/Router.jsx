@@ -9,8 +9,8 @@ import Games, { categorieLoader } from "./pages/Games";
 import GamesDefault from "./pages/GamesDefault";
 import Checkout from "./pages/Checkout";
 import NotFound from "./pages/NotFound";
-import Error from "./pages/ShowError";
 import ShowError from "./pages/ShowError";
+import Thanks from "./pages/Thanks";
 
 const Router = () => {
   const [cart, setCart] = useState([]);
@@ -41,6 +41,7 @@ const Router = () => {
           path: "checkout",
           element: <Checkout cart={cart} setCart={setCart} />,
         },
+        { path: "thanks", element: <Thanks /> },
       ],
     },
   ]);
