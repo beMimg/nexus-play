@@ -45,7 +45,7 @@ export default function ShoppingCart({ setOpen, cart, setCart }) {
   }
 
   return (
-    <div className=" absolute bg-white text-black top-0 left-0 right-0 h-screen z-40 overflow-auto md:top-[60px] md:left-auto md:z-0 md:h-[600px] md:w-96 md:rounded-l-xl">
+    <div className=" absolute bg-white text-black top-0 left-0 right-0 bottom-0 h-screen z-40 overflow-auto md:top-[60px] md:left-auto md:z-0 md:h-[600px] md:w-96 md:rounded-l-xl">
       <header className="flex flex-row justify-between  p-4">
         <h1 className="flex font-bold">Shopping Cart</h1>
         <button onClick={() => setOpen(false)} className="font-bold">
