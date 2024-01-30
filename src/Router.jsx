@@ -28,6 +28,7 @@ const Router = () => {
           loader: categoriesLoader,
           errorElement: <NotFound></NotFound>,
           children: [
+            { index: true, element: <GamesDefault /> },
             {
               path: ":id",
               element: <Games setCart={setCart}></Games>,
