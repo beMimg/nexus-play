@@ -4,11 +4,11 @@ export default function ShowError() {
   const error = useRouteError();
 
   return (
-    <div className="flex items-center justify-center h-72  flex-col">
+    <div className="flex h-72 flex-col items-center  justify-center">
       <p>{error ? error.message : "Ups, something went wrong."}</p>
       <Link
         to="/"
-        className="grid justify-center p-4 bg-blue-800 text-white m-2"
+        className="m-2 grid justify-center bg-blue-800 p-4 text-white"
       >
         Back to homepage
       </Link>

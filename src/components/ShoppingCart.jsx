@@ -45,7 +45,7 @@ export default function ShoppingCart({ setOpen, cart, setCart }) {
   }
 
   return (
-    <div className=" absolute bg-white text-black top-0 left-0 right-0 bottom-0 h-screen z-40 overflow-auto md:top-[60px] md:left-auto md:z-0 md:h-[600px] md:w-96 md:rounded-l-xl">
+    <div className=" absolute bottom-0 left-0 right-0 top-0 z-40 h-screen overflow-auto bg-white text-black md:left-auto md:top-[60px] md:z-0 md:h-[600px] md:w-96 md:rounded-l-xl">
       <header className="flex flex-row justify-between  p-4">
         <h1 className="flex font-bold">Shopping Cart</h1>
         <button onClick={() => setOpen(false)} className="font-bold">
@@ -67,14 +67,14 @@ export default function ShoppingCart({ setOpen, cart, setCart }) {
         )}
       </main>
       <footer className="p-2">
-        <div className="flex flex-row gap-4 items-center">
+        <div className="flex flex-row items-center gap-4">
           <h2>Subtotal:</h2>
           <p className="font-bold">${subtotal}</p>
         </div>
         <p className="text-sm">Shipping and taxes calculate at checkout. </p>
         {cart.length > 0 && (
           <Link
-            className="grid justify-center p-4 bg-blue-800 text-white m-2"
+            className="m-2 grid justify-center bg-blue-800 p-4 text-white"
             onClick={() => setOpen(false)}
             to="checkout"
           >

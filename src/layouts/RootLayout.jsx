@@ -10,10 +10,10 @@ export default function RootLayout({ cart, setCart }) {
 
   return (
     <>
-      <header className="bg-black  p-3 fixed w-full z-30 ">
-        <nav className="text-white flex flex-row justify-evenly items-center ">
+      <header className="fixed  z-30 w-full bg-black p-3 ">
+        <nav className="flex flex-row items-center justify-evenly text-white ">
           <h1 className="text-2xl">NexusPlay</h1>
-          <div className="flex gap-4 items-center justify-center text-xl active:text-red-200">
+          <div className="flex items-center justify-center gap-4 text-xl active:text-red-200">
             <NavLink
               className={({ isActive }) => (isActive ? activeLink : normalLink)}
               to="/"
@@ -37,15 +37,15 @@ export default function RootLayout({ cart, setCart }) {
       <main>
         <Outlet></Outlet>
       </main>
-      <footer className="flex flex-col bg-black text-white p-4 relative lg:gap-5">
-        <nav className="flex justify-evenly items-center p-2">
+      <footer className="relative flex flex-col bg-black p-4 text-white lg:gap-5">
+        <nav className="flex items-center justify-evenly p-2">
           <h1 className="text-2xl">NexusPlay</h1>
-          <div className="flex gap-4 items-center justify-center">
+          <div className="flex items-center justify-center gap-4">
             <Link to="/">Home</Link>
             <Link to="games">Games</Link>
           </div>
         </nav>
-        <section className="flex justify-evenly items-center p-2 ">
+        <section className="flex items-center justify-evenly p-2 ">
           <p className="lg:w-2/4">
             Unleash Your Gameverse with us, where every click opens a portal to
             unparalleled excitement. Navigate uncharted realms, discover hidden
@@ -55,7 +55,7 @@ export default function RootLayout({ cart, setCart }) {
           <a
             href="https://github.com/beMimg"
             target="_blank"
-            className="absolute top-2 right-2 text-xl"
+            className="absolute right-2 top-2 text-xl"
           >
             <FaGithub />
           </a>

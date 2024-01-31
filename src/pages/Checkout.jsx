@@ -45,10 +45,10 @@ export default function Checkout({ cart, setCart }) {
   }
 
   return (
-    <div className="flex flex-col gap-4 pt-20  min-h-[750px] md">
-      <h1 className="font-bold ml-4">Shopping Cart</h1>
-      <div className="flex flex-col md:flex-row md:justify-evenly md:items-center">
-        <div className="md:h-[600px] md:w-2/4 md:overflow-auto md:border-black md:border-4">
+    <div className="md flex min-h-[750px] flex-col  gap-4 pt-20">
+      <h1 className="ml-4 font-bold">Shopping Cart</h1>
+      <div className="flex flex-col md:flex-row md:items-center md:justify-evenly">
+        <div className="md:h-[600px] md:w-2/4 md:overflow-auto md:border-4 md:border-black">
           {cart.map((game) => (
             <ItemShoppingCart
               key={game.id}
@@ -58,7 +58,7 @@ export default function Checkout({ cart, setCart }) {
             ></ItemShoppingCart>
           ))}
         </div>
-        <div className="p-10 bg-gray-800 m-2 text-white  md:p-20 flex gap-2 flex-col rounded">
+        <div className="m-2 flex flex-col gap-2  rounded bg-gray-800 p-10 text-white md:p-20">
           <p>Order Summary</p>
           <div className="flex flex-row gap-2">
             <p>Subtotal: </p>
@@ -66,7 +66,7 @@ export default function Checkout({ cart, setCart }) {
           </div>
           <Link
             to="/thanks"
-            className=" w-full grid justify-center p-4 bg-blue-800 text-white rounded"
+            className=" grid w-full justify-center rounded bg-blue-800 p-4 text-white"
           >
             Pay
           </Link>

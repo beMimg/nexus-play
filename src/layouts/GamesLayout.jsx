@@ -22,7 +22,7 @@ export default function GamesLayout() {
         className="flex w-full object-cover object-center md:h-[500px] "
       />
       <section className="flex flex-col">
-        <nav className="grid grid-cols-3 gap-3 p-2 shadow-2xl bg-black xl:grid-cols-4 2xl:grid-cols-5 xl:gap-5 border-white border-b-4">
+        <nav className="grid grid-cols-3 gap-3 border-b-4 border-white bg-black p-2 shadow-2xl xl:grid-cols-4 xl:gap-5 2xl:grid-cols-5">
           {gamesCategories.map((categorie) => (
             <NavLink
               className={({ isActive }) => (isActive ? activeLink : normalLink)}

@@ -2,7 +2,7 @@ import image from "../assets/people-celebrating-online-.png";
 
 export default function Thanks() {
   return (
-    <div className="h-[730px] flex flex-col items-center gap-4  justify-center pt-20 pl-5 pr-5 md:flex-row ">
+    <div className="flex h-[730px] flex-col items-center justify-center  gap-4 pl-5 pr-5 pt-20 md:flex-row ">
       <img
         src={image}
         className="flex w-full object-cover object-center md:h-[300px] md:w-[600px]"
@@ -12,7 +12,7 @@ export default function Thanks() {
         with fictional prices. Thank you for testing. If you've encountered any
         bugs, please contact me at{" "}
         <a
-          className="text-blue-700 font-bold"
+          className="font-bold text-blue-700"
           href="https://github.com/beMimg"
           target="a_blank"
         >

@@ -55,7 +55,7 @@ export const categorieLoader = async ({ params }) => {
     ` https://api.rawg.io/api/games?genres=${id}&key=${key}`,
     {
       mode: "cors",
-    }
+    },
   );
 
   if (!res.ok) {
