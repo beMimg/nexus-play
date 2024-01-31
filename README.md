@@ -7,7 +7,7 @@ NexusPlay is a web application that simulates a game store environment, allowing
 **NexusPlay** is designed to provide users with a unique and entertaining experience by blending real games with fictional pricing. Users can navigate the simulated game store, explore various titles and categories, and witness creative pricing scenarios.
 
 **Live Preview**
-Open your web browser and go to [https://elegant-croquembouche-875342.netlify.app/](Live Preview) to access **NexusPlay**.
+Open your web browser and go to [live preview](https://elegant-croquembouche-875342.netlify.app/) to access **NexusPlay**.
 
 ## Features
 
@@ -25,7 +25,20 @@ Open your web browser and go to [https://elegant-croquembouche-875342.netlify.ap
 
 4. Enjoy the unique experience of navigating a game store.
 
-5. For a live preview, visit [https://elegant-croquembouche-875342.netlify.app/](live preview).
+5. For a live preview, visit [live preview](https://elegant-croquembouche-875342.netlify.app/).
+
+## API's used
+
+[Rawg video game database api](https://rawg.io/apidocs)
+
+## Technologies Used
+
+**NexusPlay** is built using the following technologies:
+
+- **React:** A JavaScript library for building user interfaces.
+- **Tailwind CSS:** A utility-first CSS framework for quickly styling your applications.
+- **Netlify:** A platform for continuous deployment and hosting.
+- **Vitest:** A fast and minimal JavaScript test runner for Vite.
 
 ## Contributing
 
