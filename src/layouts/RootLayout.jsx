@@ -1,12 +1,19 @@
 import { Outlet, NavLink, Link } from "react-router-dom";
 import Cart from "../components/Cart";
 import { FaGithub } from "react-icons/fa";
+import { useEffect } from "react";
 
 export default function RootLayout({ cart, setCart }) {
   const howManyProducts = cart.reduce((a, b) => a + b.quantity, 0);
 
   const activeLink = "bg-white text-black p-2 rounded-xl";
   const normalLink = "p-2 rounded-xl";
+
+  let animation;
+
+  useEffect(() => {
+    animation = "animate-jump animate-once animate-ease-out";
+  }, [cart]);
 
   return (
     <>
@@ -30,6 +37,7 @@ export default function RootLayout({ cart, setCart }) {
               howManyProducts={howManyProducts}
               cart={cart}
               setCart={setCart}
+              animation={animation}
             />
           </div>
         </nav>
