@@ -1,34 +1,23 @@
-# NexusPlay - Simulated Game Store
+# NexusPlay Documentation
+NexusPlay is a web application that simulates a game store environment, allowing users to explore real games with fictional prices. Users can navigate the simulated game store, explore various titles and categories, and witness creative pricing scenarios.
 
-NexusPlay is a web application that simulates a game store environment, allowing users to explore real games with fictional prices. This README file provides essential information to help you understand and use the NexusPlay web app effectively.
+## Live Preview 
+Experience Nexus Play in action: [Live Preview](https://elegant-croquembouche-875342.netlify.app/)
 
-## Introduction
+## Screenshots
+Take a glimpse at Nexus Play interface:
 
-**NexusPlay** is designed to provide users with a unique and entertaining experience by blending real games with fictional pricing. Users can navigate the simulated game store, explore various titles and categories, and witness creative pricing scenarios.
+![nexus-play](https://github.com/beMimg/nexus-play/assets/126000960/0ed8c10c-9cd2-478b-aa29-192d7a66e558)
 
-**Live Preview**
-Open your web browser and go to [live preview](https://elegant-croquembouche-875342.netlify.app/) to access **NexusPlay**.
+![Screenshot 2024-05-10 165811](https://github.com/beMimg/nexus-play/assets/126000960/e8f46eba-0309-4368-979d-177194459721)
+
 
 ## Features
-
 - **Game Exploration:** Browse a collection of real games with fictional prices.
 - **Simulated Purchases:** Experience the process of adding games to shopping cart and checkout.
-- **User Interaction:** Engage with a user-friendly interface for seamless navigation.
-
-## Usage
-
-1. Upon launching the app, you will be greeted with the simulated game store interface.
-
-2. Explore the available games and their fictional prices.
-
-3. Interact with the platform by "purchasing" games with fictional prices.
-
-4. Enjoy the unique experience of navigating a game store.
-
-5. For a live preview, visit [live preview](https://elegant-croquembouche-875342.netlify.app/).
+- **User Interaction:** Engage with a user-friendly interface.
 
 ## API's used
-
 [Rawg video game database api](https://rawg.io/apidocs)
 
 ## Technologies Used
@@ -39,11 +28,3 @@ Open your web browser and go to [live preview](https://elegant-croquembouche-875
 - **Tailwind CSS:** A utility-first CSS framework for quickly styling your applications.
 - **Netlify:** A platform for continuous deployment and hosting.
 - **Vitest:** A fast and minimal JavaScript test runner for Vite.
-
-## Contributing
-
-Contributions are welcome! If you have any ideas for improvement, open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the MIT License.
